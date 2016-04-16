@@ -27,15 +27,25 @@ I am not a cryptographic or security expert. I cannot provide any warranty or gu
   I used yoeman (http://yeoman.io/) to generate the base of the project. I used the angular-fullstack generator     (https://github.com/angular-fullstack/generator-angular-fullstack). The server is written in node-js with express. The client uses Angular-js (version 1). The whole project is written in babel to generate javascript, Jade (Now renamed to Pug) to generate HTML and Stylus to generate CSS.
   
   You can install it via npm with the following command:
-    npm install something.. (TODO)
+  
+  ```
+  npm install something.. (TODO)
+  ```
 
   Or you can download it and run:
-    npm install
-    bower install
+  
+  ```
+  npm install
+  bower install
+  ```
 
 ## Run
   You can run the server on port 9000 with the following command:
-    grunt serve
+  
+  ```
+  grunt serve
+  ```
+  
 ## Tests
 There is no unit tests for the moment. However, the Java implementation has been tested with the NIST SP 800-22 tests suite and a lot of other randomness tests. This javascript implementation has not been tested yet.
 
