@@ -46,6 +46,8 @@ I am not a cryptographic or security expert. I cannot provide any warranty or gu
   grunt serve
   ```
   
+  Your browser should open a page at http//:localhost:9000 
+  
 ## Tests
 There is no unit tests for the moment. However, the Java implementation has been tested with the NIST SP 800-22 tests suite and a lot of other randomness tests. This javascript implementation has not been tested yet.
 
