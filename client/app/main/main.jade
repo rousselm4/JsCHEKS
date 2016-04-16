@@ -1,0 +1,25 @@
+header#banner.hero-unit
+  .container(ng-click="$ctrl.evolve()")
+    h1 Kekchose.io
+    p {{$ctrl.key}}
+    .row
+      span(ng-repeat="result in $ctrl.results track by $index", ng-style="{display:'inline-block', 'background-color': 'green', width: '40px', margin: 0, 'margin-left': '5px', height: (result*1) + 'px'}") {{result}}
+
+.container
+
+    //.col-lg-12
+      |Username
+      input(type="text", ng-model="$ctrl.message.username")
+      br
+      |Content
+      input(type="text", ng-model="$ctrl.message.body")
+      br
+      |Color
+      input(type="text", ng-model="$ctrl.message.textColor")
+      br
+      button(ng-click="$ctrl.sendMessage()") Send
+      ul
+        li(ng-repeat="message in $ctrl.receivedMessages", ng-style="{color: message.textColor}")
+          img(ng-if="message.avatar", ng-src="{{message.avatar}}")
+          strong {{message.username}}
+          | {{message.body}}
