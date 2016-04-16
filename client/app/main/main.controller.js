@@ -8,10 +8,10 @@ class MainController {
     this.system = ChaoticSystem;
     this.system.evolve();
     this.key = this.system.getKey();
-    this.results = []
+    this.results = [];
   }
   evolve(){
-    var value = this.encrypter.encrypt("Bonjour les amis. Comment allez vous? Moi je vais très bien! :D", this.key)
+    var value = this.encrypter.encrypt('Bonjour les amis. Comment allez vous? Moi je vais très bien! :D', this.key);
     console.log(value);
     this.system.evolve();
     this.key = this.system.getKey();

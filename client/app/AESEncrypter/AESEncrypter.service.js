@@ -1,16 +1,17 @@
-'use strict';
 (function() {
+'use strict';
+var Aes = {};
 class AESEncrypterService{
   encrypt(message, key){
-    return Aes.Ctr.encrypt(message, key, 128)
+    return Aes.Ctr.encrypt(message, key, 128);
   }
   decrypt(cipher, key){
-    return Aes.Ctr.decrypt(cipher, key, 128)
+    return Aes.Ctr.decrypt(cipher, key, 128);
   }
 }
 angular.module('kekchoseIoApp')
   .service('AESEncrypter', AESEncrypterService);
-
+/* jshint ignore:start */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* AES implementation in JavaScript                                   (c) Chris Veness 2005-2016  */
 /*                                                                                   MIT Licence  */
@@ -28,7 +29,6 @@ angular.module('kekchoseIoApp')
  *
  * @namespace
  */
-var Aes = {};
 
 
 /**
@@ -227,11 +227,6 @@ Aes.rCon = [ [0x00, 0x00, 0x00, 0x00],
 /* www.movable-type.co.uk/scripts/aes.html                                                        */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-/* eslint no-redeclare: 0 *//* global WorkerGlobalScope */
-'use strict';
-if (typeof module!='undefined' && module.exports) var Aes = require('./aes.js'); // ≡ import Aes from 'aes.js'
-
-
 /**
  * Aes.Ctr: Counter-mode (CTR) wrapper for AES.
  *
@@ -404,7 +399,7 @@ Aes.Ctr.decrypt = function(ciphertext, password, nBits) {
 /* Extend String object with method to encode multi-byte string to utf8
  * - monsur.hossa.in/2012/07/20/utf-8-in-javascript.html
  * - note utf8Encode is an identity function with 7-bit ascii strings, but not with 8-bit strings;
- * - utf8Encode('x') = 'x', but utf8Encode('ça') = 'Ã§a', and utf8Encode('Ã§a') = 'ÃÂ§a'*/
+ */
 if (typeof String.prototype.utf8Encode == 'undefined') {
     String.prototype.utf8Encode = function() {
         return unescape( encodeURIComponent( this ) );
@@ -442,4 +437,5 @@ if (typeof String.prototype.base64Decode == 'undefined') {
         throw new Error('No Base64 Decode');
     };
 }
+/* jshint ignore:end */
 })();
