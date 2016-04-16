@@ -2,21 +2,27 @@
 Javascript CHaotic Encryption Key System
 
 ## Synopsis
-
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 A javascript (babel) implementation of jCHECKS of Archos Research (available here: https://github.com/Archos-Research). The main idea is to use co-evolving chaotic systems to generate secret keys. These keys are used to encrypt or decrypt messages. We want it to be as secure as a crypto-secure pseudo random number generator and to be syncronisable. 
 
 ## Services
 
 ### ChaoticSystem
+Contains the classes for the chaoticSystem and encapsulate the system into a Singleton. It contains theses classes:
+**ChaoticSystem**, **Agent**, **RuleSets**, **Rule**, **Utils**, **PRNG**
 
 ### AESEncrypter
+Contains the AES encrypter. 
 
 ### Communicator
+Websocket encapsulation service
 
 ## Motivation
 
-This project is a proof of concept. I have done that mainly for learning purposes.
+This project is a proof of concept. I have done that mainly for learning purposes. 
+
+## Warranty
+
+I am not a cryptographic or security expert. I cannot provide any warranty or guarantees if you choose to use this code.
 
 ## Installation
 
