@@ -30,7 +30,7 @@ I am not a cryptographic or security expert. I cannot provide any warranty or gu
 ## Installation
   I used yoeman (http://yeoman.io/) to generate the base of the project. I used the angular-fullstack generator     (https://github.com/angular-fullstack/generator-angular-fullstack). The server is written in node-js with express. The client uses Angular-js (version 1). The whole project is written in babel to generate javascript, Jade (Now renamed to Pug) to generate HTML and Stylus to generate CSS.
   
-  ### Prerequisites
+### Prerequisites
 
 - [Git](https://git-scm.com/)
 - [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
