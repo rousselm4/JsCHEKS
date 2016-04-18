@@ -195,7 +195,6 @@
       }
 
       this.buildKey();
-
     }
 
     getKey(requiredBitLength){
@@ -242,6 +241,7 @@
 
     evolve() {
       this.system.evolve();
+      console.log(this.system);
     }
 
     getKey(){
